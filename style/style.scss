@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+2&display=swap');
+
+
+
+
+
+html , body { 
+    height: 100%;
+    width: 100%;
+    background-color: #1a1a1a;
+    margin: 0 ; 
+    padding:  0;
+    font-family: 'Baloo 2', cursive;
+
+}
+ 
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+
+  //this is for mobile size
+  //mobile first approach
+
+.navbar {
+    font-size: 1.2rem;
+    background-color: #1a1a1a; 
+    padding: 2rem 1rem; 
+  }
+  
+  .main-nav {
+    list-style-type: none;
+    display: none; 
+  }
+  
+  .nav-links,
+  .logo {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .main-nav li {
+    text-align: center;
+    margin: 15px auto;
+  }
+  
+  .logo {
+    display: inline-block;
+    font-size: 3rem;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  
+  .navbar-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.7rem;
+  }
+  
+  #chkToggle {
+    display: none;
+  }
+  
+  #chkToggle:checked + ul.main-nav {
+    display: block;
+  }
+
+
+  .fa  {
+      padding: 3rem 1rem;
+  }
+  
+
+    // img section 
+    .grid { 
+      display: grid ;
+      grid-template-columns: 1fr ; 
+      grid-gap: .5rem;
+      width: 95%; 
+      margin: 0 auto;
+      overflow: hidden;
+      padding-bottom: 5rem;
+    }
+
+    .img__wrap {
+      position: relative;
+      width: 100%;  
+    }
+    .img__img { 
+      z-index: 10;
+      max-width: 100%; 
+      height: auto;
+
+    }
+    .img__description_layer {
+      z-index: 100;
+      position: absolute;
+      top: 0; 
+      left: 0; 
+      height: 98%;
+      width: 100%;
+      background: rgba(68, 68, 68, 0.6);
+      color: #fff;
+      visibility: hidden;
+      opacity: 0; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    
+      /* transition effect. not necessary */
+      transition: opacity .2s, visibility .2s;
+    }
+    
+    .img__wrap:hover .img__description_layer {
+      visibility: visible;
+      opacity: 1;
+    }
+    
+    .img__description {
+      transition: .2s;
+      transform: translateY(1em);
+    }
+    
+    .img__wrap:hover .img__description {
+      transform: translateY(0);
+    }
+  
+
+  @media screen and (min-width: 768px) {
+    //this is for PC size
+
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 0;
+      height: 70px;
+      align-items: center; 
+      padding: 5rem 5rem;
+    }
+  
+    #chkToggle:checked + ul.main-nav {
+      display: flex;
+    }
+  
+    .main-nav {
+      display: flex;
+      margin-right: 30px;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  
+    .main-nav li {
+      margin: 0;
+    }
+  
+    .nav-links {
+      margin-right: 2rem;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  
+    .logo {
+      margin-top: 0;
+    }
+  
+    .navbar-toggle {
+      display: none;
+    }
+  
+    .logo:hover,
+    .nav-links:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+
+
+    // img section 
+    .grid { 
+      display: grid ;
+      grid-template-columns: 1fr 1fr; 
+      grid-gap: .5rem;
+      width: 90%; 
+      margin: 0 auto;
+      overflow: hidden;
+      padding-bottom: 7rem;
+    }
+    .img__wrap {
+      position: relative;
+      width: 100%;  
+    }
+    .img__img { 
+      z-index: 10;
+      max-width: 100%; 
+      height: auto;
+
+    }
+    .img__description_layer {
+      z-index: 100;
+      position: absolute;
+      top: 0; 
+      left: 0; 
+      height: 98%;
+      width: 100%;
+      background: rgba(68, 68, 68, 0.6);
+      color: #fff;
+      visibility: hidden;
+      opacity: 0; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    
+      /* transition effect. not necessary */
+      transition: opacity .2s, visibility .2s;
+    }
+    
+    .img__wrap:hover .img__description_layer {
+      visibility: visible;
+      opacity: 1;
+    }
+    
+    .img__description {
+      transition: .2s;
+      transform: translateY(1em);
+    }
+    
+    .img__wrap:hover .img__description {
+      transform: translateY(0);
+    }
+  
+
+  }
+
+  
